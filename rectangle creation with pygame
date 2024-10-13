@@ -1,0 +1,25 @@
+import pygame, sys
+from pygame.locals import QUIT
+
+pygame.init()
+DISPLAYSURF = pygame.display.set_mode((600,600))
+pygame.display.set_caption('Rectangles')
+
+black = (0,0,0)
+white = (255,255,255)
+red = (255,0,0) 
+green = (0,255,0) 
+blue = (0,0,255)
+
+DISPLAYSURF.fill('white')
+pygame.display.update()
+while True:
+    class Rect():
+        def __init__(self, color, dimensions)
+        self.rect_surf = DISPLAYSURF
+        self.Rect_color = color
+        self.rect_dimensions = dimensions
+
+        def draw():
+            self.Draw_Rect = pygame.draw.rect(self.rect_surf, self.rect_color, )
+    
