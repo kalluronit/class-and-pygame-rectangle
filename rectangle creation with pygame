@@ -13,13 +13,26 @@ blue = (0,0,255)
 
 DISPLAYSURF.fill('white')
 pygame.display.update()
-while True:
-    class Rect():
-        def __init__(self, color, dimensions)
-        self.rect_surf = DISPLAYSURF
-        self.Rect_color = color
-        self.rect_dimensions = dimensions
 
-        def draw():
-            self.Draw_Rect = pygame.draw.rect(self.rect_surf, self.rect_color, )
-    
+while True:
+   #creating a Rectangle class
+   class Rect():
+       def __init__(self,color,dimensions):
+           self.rect_surf = DISPLAYSURF
+           self.rect_color = color
+           self.rect_dimensions=dimensions
+       def draw(self):
+           self.Draw_Rect = pygame.draw.rect(self.rect_surf, self.rect_color, self.rect_dimensions)
+   #creating Instances    
+   greenRect=Rect(green,(50,20,100,100))
+   redRect=Rect(red,(150,200,150,150))
+   blueRect=Rect(blue,(300,400,200,200))
+   #accessing methods 
+   greenRect.draw()
+   blueRect.draw()
+   redRect.draw()
+   for event in pygame.event.get():
+       if event.type == QUIT:
+           pygame.quit()
+           sys.exit()
+   pygame.display.update()
